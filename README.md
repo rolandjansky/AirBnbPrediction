@@ -7,8 +7,10 @@ We kindly ask you to submit your solution (the code) and a small note explaining
 List of programming languages you are free to use: Python, Java, Scala, R, C#, F#, Go, C, C++, Haskell, Js/Typescript – pretty much anything but LISP dialects
 
 ## Solution
-The model is rather simple given the limited information available to guess Rob's address. The number of Airbnb properties matching Rob's description within a certain radius around a set of coordinates is compared to the number of all properties matching the description. If this number is relatively high, it is more likely that his address is at these coordinates as if the number is low. It is asusmed that the properties of the apartment he gives are precise, except the price for which some margin is allowed for.
+The model is rather simple given the limited information available to guess Rob's address. The number of Airbnb properties matching Rob's description within a certain radius around a set of coordinates is compared to the number of all properties matching the description. If this number is relatively high, it is more likely that his address is at these coordinates as if the number is low. It is assumed that the properties of the apartment he gives are precise, except the price for which some margin is allowed for.
 
 [sandbox.ipynb](./sandbox.ipynb) contains the R&D version of the code including graphs and an example result.
 
 [most_likely_location.py](./most_likely_location.py) contains a simple Python app that runs the logic. The inputs are hardcoded as global variables on top of the file. Further configurables are in [location.py](./location.py) - including with what resolution a solution is searched for.
+
+The program should only be a rough POC. Hence no code around productionizing the solution is included here. Unit tests, possible dockerization, an API/web interface for running the code and such would be logical next steps if this was something used by someone.
